@@ -73,7 +73,7 @@ require './elements_lan/mod/loaihangCls.php';
                     <?php
                     }
                     ?>
-                    <temploaihang class="btnupdateloaihang" value="<?php echo $v->idloaihang; ?>">
+                    <temploaihang class="btnupdate" value="<?php echo $v->idloaihang; ?>">
                         <img class="iconimg" src="./img_lan/update2.png"/>
                     </temploaihang>
                 </td>

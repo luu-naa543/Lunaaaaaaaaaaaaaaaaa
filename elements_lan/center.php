@@ -25,6 +25,9 @@
                     case 'hanghoaView':
                         require './elements_lan/mHanghoa/hanghoaView.php';
                         break;
+                    case 'hanghoaUpdate':
+                        require './elements_lan/mHanghoa/hanghoaUpdate.php';
+                        break;
                 }
             } else {
                 require './elements_lan/default.php';

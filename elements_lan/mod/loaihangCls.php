@@ -1,7 +1,7 @@
 <?php
 
 $s = '../../elements_lan/mod/database.php';
-//$s = '../mod/database.php';
+
 if (file_exists($s)) {
     $f = $s;
     

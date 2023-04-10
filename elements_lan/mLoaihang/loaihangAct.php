@@ -30,16 +30,16 @@ if (isset($_GET['reqact'])) {
             }
             break;
         case 'updateloaihang':
-            $idloaihang = $_POST['idloaihang'];
-            $tenloaihang = $_POST['tenloaihang'];
-            $tenhinhanh = $_POST['tenhinhanh'];
+            $idloaihang = $_REQUEST['idloaihang'];
+            $tenloaihang = $_REQUEST['tenloaihang'];
+            $tenhinhanh = $_REQUEST['tenhinhanh'];
             
-            echo var_dump($_POST);
-            echo var_dump($_FILES);
+//            echo var_dump($_POST);
+//            echo var_dump($_FILES);
             
             //kiểm tra có đổi hình ảnh ko
             if (getimagesize($_FILES['fileimage']['tmp_name']) == false) {
-                $hinhanh = $_POST['hinhanh'];
+                $hinhanh = $_REQUEST['hinhanh'];
             } else {
             $hinhanh = $_FILES['fileimage']['tmp_name'];
             $hinhanh = base64_encode(file_get_contents(addslashes($hinhanh)));
@@ -53,6 +53,8 @@ if (isset($_GET['reqact'])) {
                 header('location:../../index.php?req=loaihangView&result=notok');
             }
             break;
+            
+            
         default :
              header('location:../../index.php?req=loaihangView');
              break;
