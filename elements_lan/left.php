@@ -36,7 +36,7 @@
             <ul>
                 <li><a href="index.php?req=userview">Tài khoản</a></li>
                 <li><a href="index.php?req=loaihangView">Loại hàng</a></li>
-                <li><a href="index.php?req=loaihangView">Hàng hóa</a></li>
+                <li><a href="index.php?req=hanghoaView">Hàng hóa</a></li>
             </ul>
         </div>    
         <div class="cateOrder">

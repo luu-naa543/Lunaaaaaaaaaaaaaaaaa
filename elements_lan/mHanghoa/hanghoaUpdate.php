@@ -49,7 +49,7 @@ $list_loaihang = $obj->LoaihanggetAll();
                     ?>
                     <input type="radio" name="idloaihang"<?php if($l->idloaihang==$gethanghoa->idloaihang)
                         echo "checked";?> value="<?php echo $l->idloaihang;?>"/>
-                    <img class="iconimg" src='data:image/png;base64,<?php echo ($gethanghoa->hinhanh); ?>'/>
+                    <img class="iconimg" src='data:image/png;base64,<?php echo ($l->hinhanh); ?>'/>
                     <?php echo ($l->tenloaihang);?><br>
                     <?php
                     }

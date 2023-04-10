@@ -52,8 +52,8 @@ $list_loaihang = $obj->LoaihanggetAll();
         </table>
     </form>
 </div>
-<hr>
-<div class="title_mod"><input class="iconimg" src="./img_lan/list.png"/>Danh sách hàng hóa</div>
+<hr/>
+<div class="title_mod"><img class="iconimg" src="./img_lan/list.png"/>Danh sách hàng hóa</div>
 <div class="content_mod">
     <?php 
      require './elements_lan/mod/hanghoaCls.php';
@@ -88,10 +88,11 @@ $list_loaihang = $obj->LoaihanggetAll();
                 <td><img class="imgtable" src='data:image/png;base64,<?php echo ($v->hinhanh);?>'/></td>
                 <td>
                     
+                
                     <?php
                     if (isset($_SESSION['ADMIN'])) {
                     ?>
-                    <a href="./elements_lan/mHanghoa/hanghoaAct.php?reqact=deletehanghoa&ihanghoa=<?php echo $v->idhanghoa; ?>">
+                    <a href="./elements_lan/mHanghoa/hanghoaAct.php?reqact=deletehanghoa&idhanghoa=<?php echo $v->idhanghoa; ?>">
                     <img class="iconimg" src="./img_lan/idelete.png"/>
                     </a>
                     <?php

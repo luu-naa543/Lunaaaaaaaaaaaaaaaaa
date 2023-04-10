@@ -6,7 +6,7 @@ if (file_exists($s)) {
 } else {
     $f = './elements_lan/mod/database.php';    
 }
-require $f;
+require_once $f;
 class hanghoaCls extends database {
     public function HanghoaGetAll() {
         $getAll = $this->connect->prepare("select * from hanghoa");
@@ -31,16 +31,16 @@ class hanghoaCls extends database {
     }
     public function HanghoaUpdate($tenhanghoa, $mota, $giathamkhao, $tenhinhanh, $hinhanh, $idloaihang, $idhanghoa) {
         $update = $this->connect->prepare("UPDATE hanghoa SET "
-               ." tenhanghoa=?, mota=?, giathamkhao=?, tenhinhanh=?, hinhanh=?, idloaihang=?"
-                ."WHERE idhanghoa = ?");
-        $update->execute(array($tenhanghoa, $mota, $giathamkhao, $tenhinhanh,$hinhanh, $idloaihang, $idhanghoa));
+               . "tenhanghoa=?, mota=?, giathamkhao=?, tenhinhanh=?, hinhanh=?, idloaihang=?"
+               . "WHERE idhanghoa = ?");
+        $update->execute(array($tenhanghoa, $mota, $giathamkhao, $tenhinhanh, $hinhanh, $idloaihang, $idhanghoa));
         
         return $update->rowCount();
     }
     public function HanghoaGetbyId($idhanghoa) {
-       $getTK = $this->connect->prepare("slect * from hanghoa where idhanghoa=?");
+       $getTK = $this->connect->prepare("select * from hanghoa where idhanghoa=?");
        $getTK->setFetchMode(PDO::FETCH_OBJ);
-       $getTK->execte(array($idhanghoa));
+       $getTK->execute(array($idhanghoa));
        
        return $getTK->fetch();
     }

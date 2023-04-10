@@ -9,7 +9,7 @@ if (file_exists($s)) {
     $f = './elements_lan/mod/database.php';
             
 }
-require $f;
+require_once $f;
 class loaihangCls extends database {
     public function LoaihanggetAll() {
         $getAll = $this->connect->prepare("select * from loaihang");
