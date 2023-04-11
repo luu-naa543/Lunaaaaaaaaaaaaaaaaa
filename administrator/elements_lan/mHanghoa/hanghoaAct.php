@@ -15,9 +15,9 @@ if (isset($_GET['reqact'])) {
             $hanghoa = new hanghoaCls();
             $rs = $hanghoa->HanghoaAdd($tenhanghoa, $mota, $giathamkhao, $tenhinhanh, $hinhanh, $idloaihang);
             if ($rs) {
-                header('location:../../index,php?req=hanghoaView&result=ok');
+                header('location:../../index.php?req=hanghoaView&result=ok');
             } else {
-                header('location:../../index,php?req=hanghoaView&result=notok');
+                header('location:../../index.php?req=hanghoaView&result=notok');
             }
             break;
             case 'deletehanghoa':

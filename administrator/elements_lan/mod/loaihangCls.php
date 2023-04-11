@@ -1,12 +1,12 @@
 <?php
 
-$s = '../../elements_lan/mod/database.php';
+$s = '../../administrator/elements_lan/mod/database.php';
 
 if (file_exists($s)) {
     $f = $s;
     
 } else {
-    $f = './elements_lan/mod/database.php';
+    $f = './administrator/elements_lan/mod/database.php';
             
 }
 require_once $f;

@@ -1,10 +1,10 @@
 <?php
 
-$s = '../../elements_lan/mod/database.php';
+$s = '../../administrator/elements_lan/mod/database.php';
 if (file_exists($s)) {
     $f = $s;
 } else {
-    $f = './elements_lan/mod/database.php';    
+    $f = './administrator/elements_lan/mod/database.php';    
 }
 require_once $f;
 class hanghoaCls extends database {
@@ -45,7 +45,7 @@ class hanghoaCls extends database {
        return $getTK->fetch();
     }
     public function HanghoaGetbyIdloaihang($idloaihang) {
-        $getTK = $this->connect->prepare("slect * from hanghoa where idloaihang=?");
+        $getTK = $this->connect->prepare("select * from hanghoa where idloaihang=?");
         $getTK->setFetchMode(PDO::FETCH_OBJ);
         $getTK->execute(array($idloaihang));
         

@@ -16,7 +16,7 @@ $list_loaihang = $obj->LoaihanggetAll();
     <form name="updatehanghoa" id="formupdate" method="post"
           enctype="multipart/form-data"
           action="./elements_lan/mHanghoa/hanghoaAct.php?reqact=updatehanghoa">
-        <input type="hidden" name="idihanghoa" value="<?php echo $idhanghoa; ?>"/>
+        <input type="hidden" name="idhanghoa" value="<?php echo $idhanghoa; ?>"/>
         <input type="hidden" name="hinhanh" value="<?php echo ($gethanghoa->hinhanh); ?>"/>
         <table>
             <tr>

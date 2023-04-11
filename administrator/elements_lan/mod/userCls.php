@@ -1,10 +1,10 @@
 <?php
 
-$s = '../mod/database.php';
+$s = '../administrator/mod/database.php';
 if (file_exists($s)){
    $f = $s;
 }else{
-    $f = './elements_lan/mod/database.php';
+    $f = './administrator/elements_lan/mod/database.php';
 }
 //require'./mod/database.php';
 
